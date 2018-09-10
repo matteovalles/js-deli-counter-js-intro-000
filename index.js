@@ -4,11 +4,9 @@ function takeANumber(line, name) {
 }
 
 function nowServing(katzDeliLine) {
-  if (katzDeliLine.length > 0) {
-    var temp = katzDeliLine[0]
-    katzDeliLine.shift
-    return `Currently serving ${temp}.`
+  if (katzDeliLine.length === 0) {
+    return 'The line is currently empty.'
   } else {
-    return 'There is nobody waiting to be served!'
+    return `Currently serving ${katzDeliLine.shift()}`
   }
 }
